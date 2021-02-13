@@ -1,34 +1,42 @@
-# dev-cinemapp
+## APP do desafio técnico: CinemApp
 
-### Olá amigx,
+Como proposto pelo desafio, elaborei um App, utilizando a ferramenta React Native, que lista filmes e séries diretamente do banco de dados da IMDb usando a API OMDb. Além disso, o App permite a procura e adição dos resultados à lista de favoritos do usuário, bem como a opção de ver e excluir favoritos.
 
-### Seja bem vindx ao nosso desafio!
+![Logo do App](https://i.imgur.com/L40Jj1G.png)
+### Informações gerais:
+* Nome: CinemApp
+* Desenvolvido em: React Native
+* Tamanho: 25.84MB (android)
+* Plataforma(s): Android, iOS, Web
+### Instalação no Android:
+Para instalar o App em dispositivos Android, basta executar o arquivo `release.apk`, localizado na pasta `releases/android/`. Talvez seja necessário habilitar a instalação por outras fontes nas configurações, este processo varia de cada dispositivo.
 
-Nosso passatempo favorito nessa quarentena tem sido assistir filmes e seriados, por isso pensamos em desenvolver uma solução que nos ajude na hora de selecionar o que mais gostamos. Caso você aceite o nosso desafio, precisamos que você implemente um sistema (fique a vontade pra escolher entre web ou mobile) onde será possível buscar por filmes e series utilizando a API (http://www.omdbapi.com/). Com todos esses filmes a nossa disposição queremos basicamente separar nossos favoritos, para que possamos encontrá-los facilmente depois. Portanto a sua solução deve:
+### Requisitos:
+Para executar o código, os seguintes componentes serão necessários:
+Windows |
+------------ |
+Plataforma Node.js |
+Framework React Native |
+Ferramenta Watchman (execução em tempo-real) |
+Ambiente de Desenvolvimento Java (JDK) |
+Seu editor favorito |
+Android Studio + SDK (Android) |
 
-- Permitir a busca por filmes que gostamos
-- Listar os filmes encontrados
-- Permitir que escolhamos nosso filmes favoritos
-- Permitir que removamos um filme de nossos favoritos (às vezes um filme enjoa)
-- Listar nossos filmes favoritos
+MacOS |
+------------ |
+Plataforma Node.js |
+Framework React Native |
+Ambiente de Desenvolvimento Java (JDK) |
+Ferramenta Watchman (execução em tempo-real) |
+Seu editor favorito |
+Xcode (iOS) |
+Android Studio + SDK (Android) |
+### Instruções de execução:
+**No Windows:** Para compilar o App para a plataforma Android, basta ir até a pasta principal do App (pasta onde se encontra o arquivo `App.js`), pressionar `shift` + `botão direito do mouse` e selecionar a opção "Abrir janela do PowerShell aqui".
+Na nova janela, execute o comando `react-native run-android` (é necessário que o dispositivo esteja conectado via USB ao computador). Após isso, a versão de *debugging* do App estará instalada em seu dispositivo. Para instalar a versão *release*, vá ate a pasta `android/`, repita o processo de abrir a janela do PowerShell, e execute o comando  `./gradlew assembleRelease`. O arquivo .apk estará na pasta `android/app/build/outputs/apk/release/`.
 
-Para auxiliar você nesse processo fizemos um protótipo rápido utilizando o Figma. Se quiser conferir é só seguir o link:
+**No MacOS:** O processo para gerar Apps para a plataforma Android no Mac é similar ao do Windows. Basta abrir uma janela do terminal na pasta principal do App e executar o mesmo comando. O mesmo vale para versões `release` (desde que os componentes necessários estejam presentes).
+Já para iOS, o comando para gerar Apps *debug* é `react-native run-ios`, desde que o dispositivo apropriado esteja conectado via USB no Mac. Para exportar *builds release*, basta executar o código `react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios`. O bundle contendo a build estará na pasta `ios/`.
 
-[https://www.figma.com/proto/UE8zfSxxf8K0TzpgslbYhz/CinemAPP?node-id=1%3A28&scaling=contain](https://www.figma.com/proto/UE8zfSxxf8K0TzpgslbYhz/CinemAPP?node-id=1%3A28&scaling=contain)
-
-
-Para facilitar um pouco mais as coisas, já deixamos separada uma chave de acesso para a API (ou você pode criar a sua também):
-
-```
-Chave de API: 925eba28
-Exemplo requisição: GET http://www.omdbapi.com/?apikey=925eba28&s=batman
-```
-
-Você pode desenvolver uma solução web ou mobile (react-native), se escolher a primeira opção é importante que consigamos utilizá-la também em nossos celulares.
-
-## Entrega da sua solução
-
-Deixe bem claro suas premissas, suposições e como executamos seu código. Para entregar essa solução, de um “fork” neste repositório e nos mande o link do novo repositório quando finalizar a tarefa.
-
-
-No mais aguardamos seu retorno. Boa sorte :)
+### Esclarecimentos
+O tempo anormal de desenvolvimento do App deu-se por conta de problemas técnicos com meu ambiente de desenvolvimento. Meu computador principal, que já havia apresentando falhas relacionadas à fonte de energia, queimou e não foi possível o seu reparo em tempo hábil, tendo sido necessário o uso de meu Notebook, que não possuia nenhuma das ferramentas necessárias para o desenvolvimento. Logo, o tempo elevado.
